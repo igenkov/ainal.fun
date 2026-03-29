@@ -14,7 +14,7 @@ export default function HowItWorksModal({ onClose }) {
         <button className="modal-close" onClick={onClose} aria-label="Close">
           <span className="material-symbols-outlined">close</span>
         </button>
-        <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: '48px', marginTop: '0.5rem' }} />
+        <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: '48px', marginTop: '2rem' }} />
         <p className="modal-body">
           Think of it as a translator — not between languages, but between what you mean and what people actually get.
         </p>
