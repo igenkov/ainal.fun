@@ -77,7 +77,7 @@ export default function Home() {
 
         {/* Hero — always visible */}
         <section className="hero">
-          <h1 className="hero-main">Just an analogy generator</h1>
+          <h1 className="hero-main">Just an <span style={{ color: '#2bbfb0', fontWeight: 600 }}>analogy generator</span></h1>
           <p className="hero-sub">(...yeah, not what you expected.)</p>
 
           <div className="input-section">
