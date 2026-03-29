@@ -136,7 +136,7 @@ main.results-mode .hero {
 }
 
 .hero-main {
-    font-family: 'Epilogue', sans-serif;
+    font-family: 'DM Serif Display', serif;
     font-style: normal;
     font-weight: 400;
     font-size: clamp(2.6rem, 5.5vw, 4.8rem);
