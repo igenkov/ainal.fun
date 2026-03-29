@@ -278,12 +278,12 @@ main.results-mode .hero {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    padding: 1rem;
+    right: 1rem;
+    padding: 1.25rem;
     background: rgba(250, 249, 249, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 0.5rem;
-    max-width: 15rem;
 }
 .overlay-tag {
     font-size: 0.5rem;
@@ -294,8 +294,8 @@ main.results-mode .hero {
     display: block;
 }
 .overlay p {
-    font-size: 0.8rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.55;
     color: var(--on-surface);
 }
 
