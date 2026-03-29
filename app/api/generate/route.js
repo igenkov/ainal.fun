@@ -1,7 +1,12 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
+import { rateLimit } from '../../../lib/rateLimit'
 
 export async function POST(request) {
   try {
+    if (!rateLimit(request)) {
+      return Response.json({ error: 'Too many requests. Please wait a moment.' }, { status: 429 })
+    }
+
     const { input } = await request.json()
 
     if (!input || !input.trim()) {
