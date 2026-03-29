@@ -32,19 +32,21 @@ export async function POST(request) {
       // DB unavailable — skip learning loop, core functionality unaffected
     }
 
-    const prompt = `You are an analogy expert. The user will give you a case, concept, or context.
-Return exactly 3 brilliant, clever, and memorable analogies.
+    const prompt = `You are an analogy expert. The user can give you anything: a single word, a technical term, a concept, an argument, or a full scenario. Your job is always the same — return 3 brilliant analogies that illuminate it.
 
 Rules:
 - Each analogy should be 1–3 sentences max.
 - Make them varied: one everyday/relatable, one more intellectual, one surprising/creative.
+- If the input is a single word (e.g. "latency"), explain what that word means through analogy.
+- If the input is a concept or argument, use analogy to make it viscerally clear.
+- Never start an analogy with "It's like" twice in a row — vary your openings.
 - They should be immediately understandable and useful for explaining the concept.
-- Return ONLY valid JSON: an array of 3 strings, nothing else.${topRatedSection}
+- Return ONLY a valid JSON array of 3 strings, nothing else.${topRatedSection}
 
 Example output format:
 ["Analogy one.", "Analogy two.", "Analogy three."]
 
-User's concept: ${trimmed}`
+Input: ${trimmed}`
 
     // To switch models: 'gemini-1.5-flash' (fast/cheap) or 'gemini-1.5-pro' (smarter)
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
