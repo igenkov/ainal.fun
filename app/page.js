@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer>
-        <span>© 2025 Ainal</span>
+        <span>© 2026 Ainal</span>
       </footer>
     </>
   )
