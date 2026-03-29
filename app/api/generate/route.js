@@ -69,7 +69,7 @@ User's concept: ${trimmed}`
   } catch (error) {
     console.error('[/api/generate]', error)
     return Response.json(
-      { error: 'Something went wrong. Please try again.' },
+      { error: error?.message || 'Something went wrong. Please try again.' },
       { status: 500 }
     )
   }
