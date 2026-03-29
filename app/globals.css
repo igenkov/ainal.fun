@@ -70,7 +70,7 @@ nav {
     align-items: center;
     padding: 0.5rem 2.5rem;
     z-index: 50;
-    background: rgba(250, 249, 249, 0.6);
+    background: rgba(from var(--bg) r g b / 0.6);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
 }
@@ -108,14 +108,14 @@ nav {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--on-surface-variant);
+    color: var(--on-surface);
     display: flex;
     align-items: center;
     padding: 0.25rem;
     border-radius: 50%;
     transition: color 0.3s, background 0.3s;
 }
-.theme-toggle:hover { color: var(--on-surface); background: var(--surface-high); }
+.theme-toggle:hover { background: var(--surface-high); }
 .theme-toggle .material-symbols-outlined { font-size: 1.2rem; }
 
 /* ── Background accents ── */
