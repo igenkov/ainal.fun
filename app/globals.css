@@ -289,7 +289,7 @@ main.results-mode .hero {
 }
 
 .bento-image {
-    height: 220px;
+    height: 280px;
     border-radius: 0.75rem;
     overflow: hidden;
     position: relative;
@@ -319,7 +319,7 @@ main.results-mode .hero {
     border-radius: 0.5rem;
 }
 .overlay-tag {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--secondary);
