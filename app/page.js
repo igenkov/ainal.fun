@@ -53,7 +53,7 @@ export default function Home() {
       {/* Nav */}
       <nav>
         <a href="#">
-          <img src="/logo_transp.png" alt="Ainal.fun" style={{ height: '32px', display: 'block' }} />
+          <img src="/logo_transp.png" alt="Ainal.fun" style={{ height: '80px', display: 'block' }} />
         </a>
         <div className="nav-links">
           <a href="#">About</a>
