@@ -136,7 +136,7 @@ main.results-mode .hero {
 }
 
 .hero-main {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: clamp(2.6rem, 5.5vw, 4.8rem);
@@ -149,7 +149,7 @@ main.results-mode .hero {
 }
 
 .hero-sub {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: clamp(0.9rem, 1.4vw, 1.1rem);
