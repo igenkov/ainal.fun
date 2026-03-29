@@ -177,11 +177,11 @@ main.results-mode .hero {
 }
 
 .hero-sub {
-    font-family: 'Epilogue', sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: 400;
     font-size: clamp(0.9rem, 1.4vw, 1.1rem);
-    color: #2bbfb0;
+    color: var(--primary);
     margin-top: 0.6rem;
     letter-spacing: -0.01em;
     opacity: 0;
