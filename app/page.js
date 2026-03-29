@@ -153,8 +153,8 @@ function BentoSection() {
           alt="Minimalist white architecture"
         />
         <div className="overlay">
-          <span className="overlay-tag">Curated Concept</span>
-          <p>The architecture of thought is often simpler than the façade suggests.</p>
+          <span className="overlay-tag">The Concept</span>
+          <p>Opening a site, called ainal.fun and landing in an analogy generator is like opening a door, that says &ldquo;girls&rdquo; and there is just a toilet inside.</p>
         </div>
       </div>
       <div className="bento-right">
