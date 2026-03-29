@@ -56,11 +56,11 @@ Return a JSON array of 3 strings, nothing else.${topRatedSection}`
       analogies = Array.isArray(parsed) ? parsed : parsed.analogies
     } catch {
       const jsonMatch = text.match(/\[[\s\S]*\]/)
-      if (!jsonMatch) throw new Error('Could not parse AI response')
+      if (!jsonMatch) throw new Error(`Could not parse AI response. Raw: ${text.slice(0, 300)}`)
       analogies = JSON.parse(jsonMatch[0])
     }
     if (!Array.isArray(analogies) || analogies.length < 3) {
-      throw new Error('Expected 3 analogies from AI')
+      throw new Error(`Expected 3 analogies, got: ${JSON.stringify(analogies)}`)
     }
 
     return Response.json({ analogies: analogies.slice(0, 3) })
