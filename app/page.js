@@ -4,6 +4,7 @@ import AnalogyCard from '../components/AnalogyCard'
 import LoadingSkeleton from '../components/LoadingSkeleton'
 import ThemeToggle from '../components/ThemeToggle'
 import HowItWorksModal from '../components/HowItWorksModal'
+import PoolModal from '../components/PoolModal'
 
 export default function Home() {
   const [input, setInput] = useState('')
@@ -11,6 +12,7 @@ export default function Home() {
   const [analogies, setAnalogies] = useState([])
   const [error, setError] = useState('')
   const [showModal, setShowModal] = useState(false)
+  const [showPool, setShowPool] = useState(false)
   const textareaRef = useRef(null)
 
   // Auto-grow textarea as user types
@@ -123,7 +125,7 @@ export default function Home() {
         </section>
 
         {/* Bottom section — switches by phase */}
-        {phase === 'idle' && <BentoSection />}
+        {phase === 'idle' && <BentoSection onBrowse={() => setShowPool(true)} />}
 
         {phase === 'loading' && <LoadingSkeleton />}
 
@@ -145,6 +147,7 @@ export default function Home() {
       </main>
 
       {showModal && <HowItWorksModal onClose={() => setShowModal(false)} />}
+      {showPool && <PoolModal onClose={() => setShowPool(false)} />}
 
       {/* Footer */}
       <footer>
@@ -154,7 +157,7 @@ export default function Home() {
   )
 }
 
-function BentoSection() {
+function BentoSection({ onBrowse }) {
   return (
     <section className="bento">
       <div className="bento-image">
@@ -173,7 +176,7 @@ function BentoSection() {
           <h3>Three ways to say it better</h3>
           <p>Type any concept above. Get three brilliant analogies — everyday, intellectual, and surprising.</p>
         </div>
-        <a className="browse-link" href="#">
+        <a className="browse-link" href="#" onClick={(e) => { e.preventDefault(); onBrowse() }}>
           <span className="text">Browse The Pool</span>
           <span className="material-symbols-outlined">arrow_forward_ios</span>
         </a>
