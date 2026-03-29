@@ -32,8 +32,9 @@ export async function POST(request) {
       // DB unavailable — skip learning loop, core functionality unaffected
     }
 
-    const prompt = `Give me 3 brilliant analogies for: "${trimmed}"
-Make them varied — one everyday, one intellectual, one surprising or counterintuitive.
+    const prompt = `Give me 3 analogies for: "${trimmed}"
+One naturally logical, one witty and sharp, one provocative.
+No explaining — just the analogy, let it speak for itself.
 Return a JSON array of 3 strings, nothing else.${topRatedSection}`
 
     // To switch models: 'gemini-1.5-flash' (fast/cheap) or 'gemini-1.5-pro' (smarter)
