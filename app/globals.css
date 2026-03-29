@@ -271,7 +271,7 @@ main.results-mode .hero {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.15);
+    transform: scale(1.11);
     transition: transform 0.7s;
 }
 .bento-image:hover img {
