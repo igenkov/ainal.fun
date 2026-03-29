@@ -151,8 +151,8 @@ function BentoSection() {
     <section className="bento">
       <div className="bento-image">
         <img
-          src="/logo_transp.png"
-          alt="Ainal.fun"
+          src="/background.jpg"
+          alt="Background"
         />
         <div className="overlay">
           <span className="overlay-tag">The Concept</span>
