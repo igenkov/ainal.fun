@@ -56,7 +56,7 @@ export default function Home() {
       {/* Nav */}
       <nav>
         <a href="#" onClick={(e) => { e.preventDefault(); setPhase('idle'); setInput(''); setAnalogies([]); setError('') }}>
-          <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: '48px', display: 'block' }} />
+          <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: '80px', display: 'block' }} />
         </a>
         <div className="nav-links">
           <ThemeToggle />
