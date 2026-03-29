@@ -149,8 +149,8 @@ main.results-mode .hero {
 }
 
 .hero-sub {
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
     font-weight: 300;
     font-size: clamp(0.9rem, 1.4vw, 1.1rem);
     color: var(--secondary);
