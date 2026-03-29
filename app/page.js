@@ -52,9 +52,7 @@ export default function Home() {
     <>
       {/* Nav */}
       <nav>
-        <a href="#">
-          <img src="/logo_transp.png" alt="Ainal.fun" style={{ height: '80px', display: 'block' }} />
-        </a>
+        <a className="nav-logo" href="#">Ainal.fun</a>
         <div className="nav-links">
           <a href="#">About</a>
         </div>
@@ -151,8 +149,8 @@ function BentoSection() {
     <section className="bento">
       <div className="bento-image">
         <img
-          src="/background.jpg"
-          alt="Background"
+          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80"
+          alt="Minimalist white architecture"
         />
         <div className="overlay">
           <span className="overlay-tag">The Concept</span>
