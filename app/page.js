@@ -151,10 +151,13 @@ function BentoSection() {
     <section className="bento">
       <div className="bento-image">
         <img
-          src="/text_transp.png"
-          alt="Ainal.fun"
-          style={{ objectFit: 'contain', background: 'transparent' }}
+          src="/background.jpg"
+          alt="Background"
         />
+        <div className="overlay">
+          <span className="overlay-tag">The Concept</span>
+          <p>Opening a site, called ainal.fun and landing in an analogy generator is like opening a door, that says &ldquo;girls&rdquo; and there is just a toilet inside.</p>
+        </div>
       </div>
       <div className="bento-right">
         <div className="bento-card">
