@@ -139,8 +139,6 @@ export default function Home() {
 
       {/* Footer */}
       <footer>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
         <span>© 2025 Ainal</span>
       </footer>
     </>
