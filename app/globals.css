@@ -309,27 +309,27 @@ main.results-mode .hero {
 }
 .bento-image .overlay {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    padding: 1.25rem;
-    background: rgba(from var(--surface) r g b / 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 0.5rem;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
 }
 .overlay-tag {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--secondary);
-    margin-bottom: 0.35rem;
+    letter-spacing: 0.2em;
+    color: #2bbfb0;
+    margin-bottom: 0.5rem;
     display: block;
 }
 .overlay p {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    color: var(--on-surface);
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #ffffff;
+    font-family: 'Noto Serif', serif;
+    font-weight: 300;
 }
 
 .bento-right {
