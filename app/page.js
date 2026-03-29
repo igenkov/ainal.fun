@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react'
 import AnalogyCard from '../components/AnalogyCard'
 import LoadingSkeleton from '../components/LoadingSkeleton'
+import ThemeToggle from '../components/ThemeToggle'
 
 export default function Home() {
   const [input, setInput] = useState('')
@@ -56,9 +57,9 @@ export default function Home() {
           <img src="/logo_transp.png" alt="Ainal.fun" style={{ height: '80px', display: 'block' }} />
         </a>
         <div className="nav-links">
-          <a href="#">About</a>
+          <ThemeToggle />
+          <a href="#">How it works</a>
         </div>
-        <button className="nav-cta">Contact</button>
       </nav>
 
       {/* Floating background dots */}
