@@ -61,7 +61,12 @@ export default function Home() {
         <div className="nav-links">
           <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
         </div>
-        <ThemeToggle />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button className="mobile-info theme-toggle" onClick={() => setShowModal(true)} aria-label="How it works">
+            <span className="material-symbols-outlined">info</span>
+          </button>
+          <ThemeToggle />
+        </div>
       </nav>
 
       {/* Floating background dots */}
