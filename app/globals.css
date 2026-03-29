@@ -210,7 +210,8 @@ main.results-mode .hero {
     border: none;
     cursor: pointer;
     color: #2bbfb0;
-    text-shadow: 0 0 10px rgba(43, 191, 176, 0.5);
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(43, 191, 176, 0.7);
     transition: transform 0.3s, text-shadow 0.3s;
     white-space: nowrap;
     padding-bottom: 0.1rem;
