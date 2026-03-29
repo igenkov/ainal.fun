@@ -35,6 +35,11 @@ export async function POST(request) {
     const prompt = `Give me 3 analogies for: "${trimmed}"
 One naturally logical, one witty and sharp, one provocative.
 No explaining — just the analogy, let it speak for itself.
+
+Style examples (do not reuse these, just match the energy):
+Witty: "democracy" → "Three wolves and a sheep voting on what's for dinner."
+Provocative: "masturbating while your wife is in the other room" → "Like entering your house through the window while the front door is wide open."
+
 Return a JSON array of 3 strings, nothing else.${topRatedSection}`
 
     // To switch models: 'gemini-1.5-flash' (fast/cheap) or 'gemini-1.5-pro' (smarter)
