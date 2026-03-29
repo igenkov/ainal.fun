@@ -59,8 +59,8 @@ export default function Home() {
           <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: '80px', display: 'block' }} />
         </a>
         <div className="nav-links">
-          <ThemeToggle />
           <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
+          <ThemeToggle />
         </div>
       </nav>
 
