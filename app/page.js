@@ -172,7 +172,7 @@ function BentoSection({ onBrowse }) {
         <div className="bento-card">
           <span className="material-symbols-outlined icon">auto_awesome</span>
           <h3>Three ways to say it better</h3>
-          <p>Type any concept above. Get three brilliant analogies — everyday, intellectual, and surprising.</p>
+          <p>Type any concept above. Get three analogies. Casual, surprising and sharp (or not that much)</p>
         </div>
         <a className="browse-link" href="#" onClick={(e) => { e.preventDefault(); onBrowse() }}>
           <span className="text">Browse The Pool</span>

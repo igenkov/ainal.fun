@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Ainal.fun | The Analogy Pool',
-  description: 'Type a concept. Get three brilliant analogies instantly.',
+  title: 'Ainal.fun | The Analogy Game',
+  description: 'Type a concept. Get three analogies instantly.',
 }
 
 export default function RootLayout({ children }) {
