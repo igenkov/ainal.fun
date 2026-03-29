@@ -159,7 +159,7 @@ function BentoSection() {
         />
         <div className="overlay">
           <span className="overlay-tag">The Concept</span>
-          <p><em>Opening a site, called ainal.fun and landing in an analogy generator</em> is like opening a door, that says &ldquo;girls&rdquo; and there is just a toilet inside.</p>
+          <p><em style={{ fontStyle: 'italic', color: '#2bbfb0' }}>Opening a site, called ainal.fun and landing in an analogy generator</em> is like opening a door, that says &ldquo;girls&rdquo; and there is just a toilet inside.</p>
         </div>
       </div>
       <div className="bento-right">
