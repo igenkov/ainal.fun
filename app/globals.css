@@ -265,7 +265,7 @@ main.results-mode .hero {
     border-radius: 0.75rem;
     overflow: hidden;
     position: relative;
-    background: var(--surface-high);
+    background: var(--bg);
 }
 .bento-image img {
     width: 100%;
