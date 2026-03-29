@@ -60,8 +60,8 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
-          <ThemeToggle />
         </div>
+        <ThemeToggle />
       </nav>
 
       {/* Floating background dots */}
