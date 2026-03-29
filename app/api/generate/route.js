@@ -8,7 +8,7 @@ export async function POST(request) {
       return Response.json({ error: 'Input is required' }, { status: 400 })
     }
 
-    const trimmed = input.trim().slice(0, 500)
+    const trimmed = input.trim().slice(0, 500).replace(/"/g, '\\"').replace(/\n/g, ' ')
 
     // Try to fetch top-rated analogies for the learning loop.
     // Gracefully skipped if DATABASE_URL is not configured.
