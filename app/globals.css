@@ -617,13 +617,14 @@ footer a:hover { color: var(--primary); }
 .modal-box {
     background: var(--surface);
     border-radius: 1rem;
-    padding: 2.5rem;
-    max-width: 480px;
+    padding: 3rem;
+    max-width: 520px;
     width: calc(100% - 3rem);
+    min-height: 320px;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .modal-close {
