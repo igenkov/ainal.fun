@@ -60,10 +60,8 @@ export default function Home() {
         <a href="#" onClick={(e) => { e.preventDefault(); setPhase('idle'); setInput(''); setAnalogies([]); setError('') }}>
           <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: 'clamp(44px, 10vw, 80px)', display: 'block' }} />
         </a>
-        <div className="nav-links">
-          <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+          <a className="nav-link-desktop" href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
           <button className="mobile-info theme-toggle" onClick={() => setShowModal(true)} aria-label="How it works">
             <span className="material-symbols-outlined">info</span>
           </button>

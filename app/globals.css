@@ -81,15 +81,14 @@ nav {
     color: var(--primary);
     text-decoration: none;
 }
-.nav-links { display: flex; align-items: center; gap: 3rem; }
-.nav-links a {
+.nav-link-desktop {
     color: var(--on-surface-variant);
     font-size: 0.875rem;
     text-decoration: none;
     letter-spacing: -0.01em;
     transition: color 0.3s;
 }
-.nav-links a:hover { color: var(--primary); }
+.nav-link-desktop:hover { color: var(--primary); }
 .nav-cta {
     background: var(--primary);
     color: var(--surface);
@@ -739,7 +738,7 @@ footer a:hover { color: var(--primary); }
 @media (max-width: 768px) {
     /* Nav */
     nav { padding: 0.5rem 1rem; }
-    .nav-links { display: none; }
+    .nav-link-desktop { display: none; }
     .mobile-info { display: flex; }
 
     /* Layout */
