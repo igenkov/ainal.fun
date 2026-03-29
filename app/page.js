@@ -154,8 +154,8 @@ function BentoSection() {
     <section className="bento">
       <div className="bento-image">
         <img
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80"
-          alt="Minimalist white architecture"
+          src="/background.jpg"
+          alt="Background"
         />
         <div className="overlay">
           <span className="overlay-tag">The Concept</span>
