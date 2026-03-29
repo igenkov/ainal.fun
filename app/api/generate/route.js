@@ -70,7 +70,7 @@ Return a JSON array of 3 strings, nothing else.${topRatedSection}`
   } catch (error) {
     console.error('[/api/generate]', error)
     return Response.json(
-      { error: error?.message || 'Something went wrong. Please try again.' },
+      { error: 'Something went wrong. Please try again.' },
       { status: 500 }
     )
   }
