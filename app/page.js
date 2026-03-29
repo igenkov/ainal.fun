@@ -3,12 +3,14 @@ import { useState, useRef, useEffect } from 'react'
 import AnalogyCard from '../components/AnalogyCard'
 import LoadingSkeleton from '../components/LoadingSkeleton'
 import ThemeToggle from '../components/ThemeToggle'
+import HowItWorksModal from '../components/HowItWorksModal'
 
 export default function Home() {
   const [input, setInput] = useState('')
   const [phase, setPhase] = useState('idle') // idle | loading | results
   const [analogies, setAnalogies] = useState([])
   const [error, setError] = useState('')
+  const [showModal, setShowModal] = useState(false)
   const textareaRef = useRef(null)
 
   // Auto-grow textarea as user types
@@ -58,7 +60,7 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <ThemeToggle />
-          <a href="#">How it works</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
         </div>
       </nav>
 
@@ -136,6 +138,8 @@ export default function Home() {
           </section>
         )}
       </main>
+
+      {showModal && <HowItWorksModal onClose={() => setShowModal(false)} />}
 
       {/* Footer */}
       <footer>
