@@ -6,6 +6,10 @@ export async function POST(request) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    if (input.length > 500 || analogy.length > 2000) {
+      return Response.json({ error: 'Input or analogy too long' }, { status: 400 })
+    }
+
     const r = Number(rating)
     if (!Number.isInteger(r) || r < 1 || r > 5) {
       return Response.json({ error: 'Rating must be an integer between 1 and 5' }, { status: 400 })
