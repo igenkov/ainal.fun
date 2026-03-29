@@ -15,7 +15,7 @@ export async function POST(request) {
     let topRatedSection = ''
     try {
       const { neon } = await import('@neondatabase/serverless')
-      const sql = neon(process.env.DATABASE_URL)
+      const sql = neon(process.env.DATABASE_POSTGRES_URL)
       const rows = await sql`
         SELECT analogy, AVG(rating) AS avg_rating, COUNT(*) AS cnt
         FROM ratings

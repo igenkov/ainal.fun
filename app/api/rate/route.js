@@ -12,7 +12,7 @@ export async function POST(request) {
     }
 
     const { neon } = await import('@neondatabase/serverless')
-    const sql = neon(process.env.DATABASE_URL)
+    const sql = neon(process.env.DATABASE_POSTGRES_URL)
     await sql`
       INSERT INTO ratings (input, analogy, rating)
       VALUES (${input.trim()}, ${analogy}, ${r})
