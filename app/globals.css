@@ -209,7 +209,7 @@ main.results-mode .hero {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--on-surface);
+    color: #2bbfb0;
     transition: transform 0.3s, opacity 0.3s;
     white-space: nowrap;
     padding-bottom: 0.1rem;
