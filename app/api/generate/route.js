@@ -40,7 +40,7 @@ Return a JSON array of 3 strings, nothing else.${topRatedSection}`
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
     const model = genAI.getGenerativeModel({
       model: 'gemini-2.5-flash',
-      generationConfig: { maxOutputTokens: 1000 },
+      generationConfig: { maxOutputTokens: 3000 },
     })
 
     const result = await model.generateContent(prompt)
