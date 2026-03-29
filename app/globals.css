@@ -313,7 +313,7 @@ main.results-mode .hero {
     left: 1rem;
     right: 1rem;
     padding: 1.25rem;
-    background: rgba(250, 249, 249, 0.75);
+    background: rgba(from var(--surface) r g b / 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 0.5rem;
