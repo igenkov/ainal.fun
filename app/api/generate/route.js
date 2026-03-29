@@ -50,17 +50,25 @@ User's concept: ${trimmed}`
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
     const model = genAI.getGenerativeModel({
       model: 'gemini-2.5-flash',
-      generationConfig: { maxOutputTokens: 1000 },
+      generationConfig: {
+        maxOutputTokens: 1000,
+        responseMimeType: 'application/json',
+      },
     })
 
     const result = await model.generateContent(prompt)
     const text = result.response.text().trim()
 
-    // Extract JSON array robustly — Gemini sometimes wraps output in ```json
-    const jsonMatch = text.match(/\[[\s\S]*\]/)
-    if (!jsonMatch) throw new Error('Could not parse AI response')
-
-    const analogies = JSON.parse(jsonMatch[0])
+    // Extract JSON array — try direct parse first, then regex fallback
+    let analogies
+    try {
+      const parsed = JSON.parse(text)
+      analogies = Array.isArray(parsed) ? parsed : parsed.analogies
+    } catch {
+      const jsonMatch = text.match(/\[[\s\S]*\]/)
+      if (!jsonMatch) throw new Error('Could not parse AI response')
+      analogies = JSON.parse(jsonMatch[0])
+    }
     if (!Array.isArray(analogies) || analogies.length < 3) {
       throw new Error('Expected 3 analogies from AI')
     }
