@@ -116,7 +116,7 @@ export default function Home() {
             <p className="input-hint">
               {phase === 'results'
                 ? 'Change concept and think again to regenerate'
-                : 'Enter a concept to bridge the void'}
+                : 'Enter a concept - get the idea'}
             </p>
             {error && <p className="error-message">{error}</p>}
           </div>
