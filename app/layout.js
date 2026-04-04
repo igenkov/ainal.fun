@@ -3,9 +3,6 @@ import './globals.css'
 export const metadata = {
   title: 'Ainal.fun | The Analogy Game',
   description: 'Type a concept. Get three analogies instantly.',
-  icons: {
-    icon: '/favicon.png',
-  },
   openGraph: {
     title: 'Ainal.fun | The Analogy Game',
     description: 'Type a concept. Get three analogies instantly.',
