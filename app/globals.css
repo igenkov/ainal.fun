@@ -203,9 +203,8 @@ main.results-mode {
 
 .hero-sub {
     font-family: 'Rajdhani', sans-serif;
-    font-style: italic;
     font-weight: 600;
-    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
     color: var(--magenta);
     margin-top: 0.5rem;
     opacity: 0;
