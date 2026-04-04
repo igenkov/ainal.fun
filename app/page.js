@@ -163,6 +163,7 @@ export default function Home() {
       {/* Footer */}
       <footer>
         <span>© 2026 AINAL</span>
+        <a href="/privacy" className="footer-link">Privacy</a>
       </footer>
     </>
   )

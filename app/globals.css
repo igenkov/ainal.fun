@@ -728,6 +728,39 @@ main.results-mode {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── Privacy Page ── */
+.privacy-page {
+    min-height: 100vh;
+    background: #05050f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem 5rem;
+}
+.privacy-back {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(0, 255, 255, 0.5);
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: color 0.2s;
+}
+.privacy-back:hover { color: var(--cyan); }
+.privacy-back .material-symbols-outlined { font-size: 1rem; }
+.privacy-content {
+    max-width: 560px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 /* ── Footer ── */
 footer {
     position: fixed;
@@ -748,6 +781,17 @@ footer span {
     text-transform: uppercase;
     letter-spacing: 0.25em;
 }
+.footer-link {
+    font-family: 'Orbitron', sans-serif;
+    color: rgba(0, 255, 255, 0.35);
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.2s;
+}
+.footer-link:hover { color: var(--cyan); }
 
 /* ── Modal backdrop ── */
 .modal-backdrop {
