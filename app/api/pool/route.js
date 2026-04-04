@@ -7,7 +7,7 @@ export async function GET() {
       FROM ratings
       WHERE rating >= 3
       ORDER BY created_at DESC
-      LIMIT 10
+      LIMIT 20
     `
     return Response.json({ pool: rows })
   } catch (error) {
