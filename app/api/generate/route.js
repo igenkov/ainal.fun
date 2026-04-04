@@ -39,6 +39,7 @@ export async function POST(request) {
 
     const prompt = `Give me 3 analogies for: "${trimmed}"
 One naturally logical, one witty and sharp, one provocative (provocative means it reveals an uncomfortable truth or subverts a social norm — not shock for shock's sake).
+An analogy compares using a familiar scenario — "X is like Y" structure. Not a metaphor ("X is Y"). Not a definition.
 No explaining — just the analogy, let it speak for itself.
 
 Style examples (do not reuse these, just match the energy):
