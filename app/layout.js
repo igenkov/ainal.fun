@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Ainal.fun | The Analogy Game',
   description: 'Type a concept. Get three analogies instantly.',
   icons: {
-    icon: '/logo_neon.png',
+    icon: '/favicon.png',
   },
   openGraph: {
     title: 'Ainal.fun | The Analogy Game',
