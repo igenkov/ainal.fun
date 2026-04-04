@@ -43,7 +43,6 @@ An analogy is not a metaphor. It uses a familiar scenario to illuminate an unfam
 No explaining — just the analogy, let it speak for itself.
 
 Style examples (do not reuse these, just match the energy):
-Logical: "analogy" → "Like explaining the color red to a person born blind by saying it's the taste of a trumpet blast."
 Witty: "democracy" → "Three wolves and a sheep voting on what's for dinner."
 Provocative: "masturbating while your wife is in the other room" → "Like entering your house through the window while the front door is wide open."
 
