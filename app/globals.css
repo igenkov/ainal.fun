@@ -842,6 +842,10 @@ footer span {
     color: rgba(224, 240, 255, 0.85);
     font-weight: 500;
 }
+.hiw-accent {
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
 
 /* ── Pool Modal ── */
 .pool-modal {
