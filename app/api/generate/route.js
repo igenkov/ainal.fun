@@ -39,10 +39,11 @@ export async function POST(request) {
 
     const prompt = `Give me 3 analogies for: "${trimmed}"
 One naturally logical, one witty and sharp, one provocative (provocative means it reveals an uncomfortable truth or subverts a social norm — not shock for shock's sake).
-An analogy compares using a familiar scenario — "X is like Y" structure. Not a metaphor ("X is Y"). Not a definition.
+An analogy is not a metaphor. It uses a familiar scenario to illuminate an unfamiliar one. Not "X is Y" — but "X is like doing Y in situation Z."
 No explaining — just the analogy, let it speak for itself.
 
 Style examples (do not reuse these, just match the energy):
+Logical: "analogy" → "Like explaining the color red to a person born blind by saying it's the taste of a trumpet blast."
 Witty: "democracy" → "Three wolves and a sheep voting on what's for dinner."
 Provocative: "masturbating while your wife is in the other room" → "Like entering your house through the window while the front door is wide open."
 
