@@ -11,8 +11,8 @@ export async function POST(request) {
     }
 
     const r = Number(rating)
-    if (!Number.isInteger(r) || r < 1 || r > 5) {
-      return Response.json({ error: 'Rating must be an integer between 1 and 5' }, { status: 400 })
+    if (!Number.isInteger(r) || r < 0 || r > 5) {
+      return Response.json({ error: 'Rating must be an integer between 0 and 5' }, { status: 400 })
     }
 
     const { neon } = await import('@neondatabase/serverless')

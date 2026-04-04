@@ -585,6 +585,39 @@ main.results-mode {
     gap: 0.1rem;
 }
 
+.thumb-down-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.1rem;
+    line-height: 1;
+    color: rgba(255, 0, 255, 0.25);
+    transition: color 0.15s, transform 0.15s;
+}
+.thumb-down-btn .material-symbols-outlined {
+    font-size: 1rem;
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+    transition: font-variation-settings 0.15s;
+}
+.thumb-down-btn:hover:not(:disabled) {
+    color: #ff00ff;
+    transform: scale(1.25);
+}
+.thumb-down-btn.active {
+    color: #ff00ff;
+}
+.thumb-down-btn.active .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+.thumb-down-btn:disabled:not(.active) { opacity: 0.3; cursor: default; }
+
+.star-rating-divider {
+    width: 1px;
+    height: 0.85rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 0.35rem;
+}
+
 .star-btn {
     background: none;
     border: none;
