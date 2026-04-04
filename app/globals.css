@@ -851,7 +851,31 @@ footer span {
 .pool-modal {
     max-width: 560px;
     max-height: 80vh;
+    overflow: hidden;
+}
+
+.pool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     overflow-y: auto;
+    max-height: calc(80vh - 10rem);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.3) rgba(10, 10, 26, 0.5);
+}
+.pool-list::-webkit-scrollbar {
+    width: 6px;
+}
+.pool-list::-webkit-scrollbar-track {
+    background: rgba(10, 10, 26, 0.5);
+    border-radius: 3px;
+}
+.pool-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 255, 0.3);
+    border-radius: 3px;
+}
+.pool-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 255, 0.5);
 }
 
 .pool-title {
@@ -880,12 +904,6 @@ footer span {
     text-align: center;
     padding: 2rem 0;
     font-family: 'Rajdhani', sans-serif;
-}
-
-.pool-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
 .pool-item {
