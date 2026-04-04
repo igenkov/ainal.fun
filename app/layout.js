@@ -3,6 +3,30 @@ import './globals.css'
 export const metadata = {
   title: 'Ainal.fun | The Analogy Game',
   description: 'Type a concept. Get three analogies instantly.',
+  icons: {
+    icon: '/logo_neon.png',
+  },
+  openGraph: {
+    title: 'Ainal.fun | The Analogy Game',
+    description: 'Type a concept. Get three analogies instantly.',
+    url: 'https://ainal.fun',
+    siteName: 'Ainal.fun',
+    images: [
+      {
+        url: 'https://ainal.fun/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ainal.fun - The Analogy Game',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ainal.fun | The Analogy Game',
+    description: 'Type a concept. Get three analogies instantly.',
+    images: ['https://ainal.fun/logo.png'],
+  },
 }
 
 export default function RootLayout({ children }) {
