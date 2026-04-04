@@ -2,7 +2,6 @@
 import { useState, useRef, useEffect } from 'react'
 import AnalogyCard from '../components/AnalogyCard'
 import LoadingSkeleton from '../components/LoadingSkeleton'
-import ThemeToggle from '../components/ThemeToggle'
 import HowItWorksModal from '../components/HowItWorksModal'
 import PoolModal from '../components/PoolModal'
 
@@ -15,14 +14,12 @@ export default function Home() {
   const [showPool, setShowPool] = useState(false)
   const textareaRef = useRef(null)
 
-  // Auto-grow textarea as user types
   const handleInput = (e) => {
     setInput(e.target.value)
     e.target.style.height = 'auto'
     e.target.style.height = e.target.scrollHeight + 'px'
   }
 
-  // Allow body to scroll when results are shown
   useEffect(() => {
     if (phase === 'results') {
       document.body.classList.add('scrollable')
@@ -55,38 +52,48 @@ export default function Home() {
 
   return (
     <>
+      {/* Background layers */}
+      <div className="bg-cityscape" />
+      <div className="bg-neon-grid" />
+      <div className="bg-character">
+        <div className="bg-character-inner">
+          <div className="bg-character-img-wrap">
+            <img src="/character.png" alt="" />
+            <div className="bg-character-overlay-side" />
+            <div className="bg-character-overlay-bottom" />
+          </div>
+        </div>
+      </div>
+
       {/* Nav */}
       <nav>
         <a href="#" onClick={(e) => { e.preventDefault(); setPhase('idle'); setInput(''); setAnalogies([]); setError('') }}>
-          <img src="/logo_transp2.png" alt="Ainal.fun" style={{ height: 'clamp(44px, 10vw, 80px)', display: 'block' }} />
+          <img src="/logo_neon.png" alt="Ainal.fun" style={{ height: 'clamp(40px, 8vw, 56px)', display: 'block' }} />
         </a>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-          <a className="nav-link-desktop" href="#" onClick={(e) => { e.preventDefault(); setShowModal(true) }}>How it works</a>
-          <button className="mobile-info theme-toggle" onClick={() => setShowModal(true)} aria-label="How it works">
-            <span className="material-symbols-outlined">info</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <button className="nav-link-desktop" onClick={() => setShowPool(true)}>The Pool</button>
+          <button className="nav-link-desktop" onClick={() => setShowModal(true)}>How it works</button>
+          <button className="mobile-info nav-link-desktop" onClick={() => setShowModal(true)} aria-label="How it works">
+            <span className="material-symbols-outlined" style={{ fontSize: '1.3rem' }}>info</span>
           </button>
-          <ThemeToggle />
         </div>
       </nav>
 
-      {/* Floating background dots */}
-      <div className="bg-dots">
-        <div className="dot" style={{ top: '22%', left: '8%', width: 8, height: 8, background: 'var(--secondary-fixed-dim)', opacity: 0.3 }} />
-        <div className="dot" style={{ top: '70%', left: '15%', width: 10, height: 10, background: 'var(--tertiary-fixed)', opacity: 0.45, animationDelay: '-6s' }} />
-        <div className="dot" style={{ top: '30%', right: '18%', width: 6, height: 6, background: 'var(--secondary-fixed)', opacity: 0.2, animationDelay: '-9s' }} />
-        <div className="dot" style={{ bottom: '15%', right: '8%', width: 14, height: 14, background: 'var(--surface-high)', opacity: 0.5, animationDelay: '-13s' }} />
-        <div className="dot" style={{ top: '55%', right: '12%', width: 7, height: 7, background: 'var(--outline-variant)', opacity: 0.15, animationDelay: '-4s' }} />
-        <div className="dot" style={{ bottom: '30%', left: '30%', width: 5, height: 5, background: 'var(--secondary-fixed-dim)', opacity: 0.2, animationDelay: '-7s' }} />
-      </div>
-
       {/* Main */}
       <main className={phase === 'results' ? 'results-mode' : ''}>
-
-        {/* Hero — always visible */}
         <section className="hero">
-          <h1 className="hero-main">Just an <span style={{ color: '#2bbfb0', fontWeight: 600 }}>analogy generator</span></h1>
-          <p className="hero-sub">(...yeah, not what you expected.)</p>
+          {/* Slogan Cluster */}
+          <div className="hero-header-cluster">
+            <h1 className="hero-main">
+              <span style={{ color: '#00ffff', textShadow: '0 0 10px rgba(0,255,255,0.8), 0 0 20px rgba(0,255,255,0.4)' }}>Just an </span>
+              <span style={{ color: '#ff00ff', textShadow: '0 0 10px rgba(255,0,255,0.8), 0 0 20px rgba(255,0,255,0.4)' }}>analogy game</span>
+            </h1>
+            {phase === 'idle' && (
+              <p className="hero-sub">(...yeah, not what you expected.)</p>
+            )}
+          </div>
 
+          {/* Action Cluster (Input) */}
           <div className="input-section">
             <div className="input-row">
               <textarea
@@ -107,23 +114,29 @@ export default function Home() {
                 </span>
                 <span
                   className={`material-symbols-outlined${phase === 'loading' ? ' spin' : ''}`}
-                  style={{ fontSize: '1.1rem' }}
+                  style={{ fontSize: '1rem' }}
                 >
                   {phase === 'loading' ? 'autorenew' : 'trending_flat'}
                 </span>
               </button>
             </div>
             <p className="input-hint">
-              {phase === 'results'
-                ? 'Change concept and think again to regenerate'
-                : 'Enter a concept - get the idea'}
+                {phase === 'results' ? 'Change concept and think again to regenerate' : 'Enter a concept - get the idea'}
             </p>
             {error && <p className="error-message">{error}</p>}
           </div>
-        </section>
 
-        {/* Bottom section — switches by phase */}
-        {phase === 'idle' && <BentoSection onBrowse={() => setShowPool(true)} />}
+          {phase === 'idle' && (
+            <>
+              <div className="example-analogy">
+                <div className="example-analogy-bar" />
+                <p className="example-analogy-text">
+                  Opening a site, called <span style={{ color: '#ff00ff' }}>ainal.fun</span> and landing in an analogy game is like opening a door, that says <span style={{ color: '#ff00ff' }}>&apos;GIRLS&apos;</span> and there is just a toilet inside.
+                </p>
+              </div>
+            </>
+          )}
+        </section>
 
         {phase === 'loading' && <LoadingSkeleton />}
 
@@ -136,7 +149,7 @@ export default function Home() {
             </div>
             <div className="regenerate-row">
               <button className="regenerate-btn" onClick={generate}>
-                <span className="material-symbols-outlined" style={{ fontSize: '1rem' }}>refresh</span>
+                <span className="material-symbols-outlined" style={{ fontSize: '0.9rem' }}>refresh</span>
                 Regenerate
               </button>
             </div>
@@ -149,36 +162,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer>
-        <span>© 2026 Ainal</span>
+        <span>© 2026 AINAL</span>
       </footer>
     </>
-  )
-}
-
-function BentoSection({ onBrowse }) {
-  return (
-    <section className="bento">
-      <div className="bento-image">
-        <img
-          src="/ainal_back.jpg"
-          alt="Ainal background"
-        />
-        <div className="overlay">
-          <span className="overlay-tag">The Concept</span>
-          <p><em style={{ fontStyle: 'italic', color: '#2bbfb0' }}>Opening a site, called ainal.fun and landing in an analogy generator</em> is like opening a door, that says &ldquo;girls&rdquo; and there is just a toilet inside.</p>
-        </div>
-      </div>
-      <div className="bento-right">
-        <div className="bento-card">
-          <span className="material-symbols-outlined icon">auto_awesome</span>
-          <h3>Three ways to say it better</h3>
-          <p>Type any concept above. Get three analogies. Casual, surprising and sharp (or not that much)</p>
-        </div>
-        <a className="browse-link" href="#" onClick={(e) => { e.preventDefault(); onBrowse() }}>
-          <span className="text">Browse The Pool</span>
-          <span className="material-symbols-outlined">arrow_forward_ios</span>
-        </a>
-      </div>
-    </section>
   )
 }

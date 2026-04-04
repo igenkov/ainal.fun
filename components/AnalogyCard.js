@@ -14,11 +14,13 @@ export default function AnalogyCard({ index, text, input }) {
     setDone(false)
 
     let i = 0
+    let interval;
+
     // Stagger card start by index so they type in sequence
     const startDelay = index * 180
 
     const starter = setTimeout(() => {
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         i++
         setDisplayed(text.slice(0, i))
         if (i >= text.length) {
@@ -26,10 +28,12 @@ export default function AnalogyCard({ index, text, input }) {
           setDone(true)
         }
       }, 14)
-      return () => clearInterval(interval)
     }, startDelay)
 
-    return () => clearTimeout(starter)
+    return () => {
+      clearTimeout(starter)
+      if (interval) clearInterval(interval)
+    }
   }, [text, index])
 
   const handleCopy = () => {
