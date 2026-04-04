@@ -40,6 +40,7 @@ export async function POST(request) {
     const prompt = `Give me 3 analogies for: "${trimmed}"
 One naturally logical, one witty and sharp, one provocative (provocative means it reveals an uncomfortable truth or subverts a social norm — not shock for shock's sake).
 No explaining — just the analogy, let it speak for itself.
+Shorter is almost always better. A great analogy often lands in one sentence without needing context or explanation.
 
 Style examples (do not reuse these, just match the energy):
 Witty: "democracy" → "Three wolves and a sheep voting on what's for dinner."
